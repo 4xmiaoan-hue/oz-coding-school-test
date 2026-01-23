@@ -1,0 +1,30 @@
+{
+  "theme_version": "1.0.0",
+  "layout": {
+    "type": "webtoon_scroll",
+    "panel_spacing": "0px",
+    "container_width": "100%",
+    "max_width": "600px"
+  },
+  "typography": {
+    "font_family_brush": "'Nanum Brush Script', cursive",
+    "font_family_serif": "'Noto Serif KR', serif",
+    "font_size_body": "1.125rem",
+    "line_height_body": "2.0",
+    "letter_spacing_body": "0.02em",
+    "text_color_primary": "#1A1A1A",
+    "text_color_secondary": "#4A4A4A"
+  },
+  "panels": {
+    "background_image_url": "/assets/scroll_bg.png",
+    "padding": {
+      "mobile": "2rem 1.5rem",
+      "desktop": "4rem 3rem"
+    },
+    "overlay_color": "rgba(253, 251, 247, 0.85)"
+  },
+  "animations": {
+    "fade_in_duration": "0.8s",
+    "scroll_trigger_offset": "100px"
+  }
+}

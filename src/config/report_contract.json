@@ -1,0 +1,89 @@
+{
+  "contract_version": "1.0.0",
+  "description": "Immutable contract for Webtoon Scroll Report structure",
+  "constraints": {
+    "total_min_chars_no_space": 20000,
+    "section_min_chars_no_space": 2000,
+    "required_section_count": 8,
+    "section_markers": [
+      "<SECTION_0>",
+      "<SECTION_1>",
+      "<SECTION_2>",
+      "<SECTION_3>",
+      "<SECTION_4>",
+      "<SECTION_5>",
+      "<SECTION_6>",
+      "<SECTION_7>"
+    ],
+    "forbid_patterns": [
+      "^[0-9]+\\.", 
+      "^\\- ", 
+      "^\\* ", 
+      "다\\.$",
+      "입니다\\.$"
+    ],
+    "required_inclusions": {
+      "section_2": ["saju_evidence_json"]
+    },
+    "max_plain_ending_ratio": 0.05
+  },
+  "sections": [
+    {
+      "id": 0,
+      "marker": "<SECTION_0>",
+      "title": "핵심 요약",
+      "role": "summary_card",
+      "min_chars": 1500
+    },
+    {
+      "id": 1,
+      "marker": "<SECTION_1>",
+      "title": "질문의 배경",
+      "role": "intro",
+      "min_chars": 2000
+    },
+    {
+      "id": 2,
+      "marker": "<SECTION_2>",
+      "title": "사주 구조 분석",
+      "role": "analysis_structure",
+      "min_chars": 3500,
+      "must_include_data": true
+    },
+    {
+      "id": 3,
+      "marker": "<SECTION_3>",
+      "title": "대운과 세운의 흐름",
+      "role": "analysis_flow",
+      "min_chars": 3500
+    },
+    {
+      "id": 4,
+      "marker": "<SECTION_4>",
+      "title": "반복된 패턴과 원인",
+      "role": "analysis_pattern",
+      "min_chars": 3000
+    },
+    {
+      "id": 5,
+      "marker": "<SECTION_5>",
+      "title": "변화의 국면 (Before/After)",
+      "role": "contrast",
+      "min_chars": 2500
+    },
+    {
+      "id": 6,
+      "marker": "<SECTION_6>",
+      "title": "허용과 선택의 가이드",
+      "role": "advice",
+      "min_chars": 2500
+    },
+    {
+      "id": 7,
+      "marker": "<SECTION_7>",
+      "title": "도사의 마지막 편지",
+      "role": "ending",
+      "min_chars": 2000
+    }
+  ]
+}
